@@ -20,21 +20,31 @@ function About() {
               of new features of development, i will show you all my projects
               and scale of learning.
             </p>
-            <nav className="about-nav">
-              <input type="text" placeholder="Your Email Address" />
-              <button type="button">Get Started</button>
-            </nav>
           </div>
         </div>
       </div>
+      <div className="triangle"></div>
     </Wrapper>
   );
 }
 
 const Wrapper = styled.section`
+  position: relative;
+  .triangle {
+    position: absolute;
+    z-index: 1;
+    bottom: -1px;
+    width: 100%;
+    height: 10vw;
+    background: #fff;
+    clip-path: polygon(100% 0px, 100% 0px, 100% 100%, 0px 100%);
+  }
+
   .about-content {
     display: grid;
+    margin-bottom: 5rem;
   }
+
   .container-img {
     display: flex;
     justify-content: center;
@@ -53,34 +63,9 @@ const Wrapper = styled.section`
     h1 {
       text-transform: inherit;
     }
-
     p {
       color: var(--clr-grey-6);
       font-size: 1rem;
-    }
-  }
-
-  .about-nav {
-    input {
-      background: var(--clr-grey-7);
-      border: none;
-      padding: 0.5rem 1rem;
-      border-top-left-radius: 5px;
-      border-bottom-left-radius: 5px;
-      background-color: var(--clr-grey-1);
-      outline: none;
-    }
-    button {
-      background-color: rgb(253, 133, 20);
-      padding: 0.5rem 1rem;
-      width: 100%;
-      max-width: 150px;
-      border-top-right-radius: 10px;
-      border-bottom-right-radius: 10px;
-      color: #fff;
-      font-weight: bold;
-      border: none;
-      cursor: pointer;
     }
   }
 `;
